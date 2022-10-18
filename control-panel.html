@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="us-en">
+<head>
+	<script>
+	const sourceChannel = new BroadcastChannel('obs-sing-along-source-channel');
+	const panelChannel = new BroadcastChannel('obs-sing-along-panel-channel');
+
+	sourceChannel.onmessage = (ev) => singAlongControl.handleSourceEvent(ev);
+
+	class SingAlongControl {
+		handleSourceEvent(ev) {
+			
+			const {name, verseCount, selectedVerse} = ev.data;
+			
+			switch(name) {
+				case "SONG-LOADED": {
+					console.log(`Song loaded, verse count: ${verseCount}`);
+					this.showVerseNumbers(verseCount);
+					break;
+				}
+			
+				case "VERSE-SELECTED": {
+					console.log(`Verse selected: ${selectedVerse}`);
+					break;
+				}
+				
+				default: {
+					console.log(`Sing Along control received a message: ${JSON.stringify(ev.data, null, 3)}`);
+					break;
+				}
+			}
+		};
+		
+		selectVerse(index) {
+			panelChannel.postMessage({name: "SELECT-VERSE", index: index});
+		};
+		
+		showVerseNumbers(count) {
+			var innerHtml = "";
+			for(var i = 1; i <= count; i++) { innerHtml += `<span class="verseNumber" onclick="singAlongControl.selectVerse(${i - 1})">${i}</span>` };
+			document.getElementById("verses").innerHTML = innerHtml;
+		};
+	}
+	</script>
+	<style>
+		.verseNumber {
+			margin: 1.25em;
+			padding: 1.25em;
+			border: solid 1px #F3F3F3;
+		}
+	</style>
+</head>
+<body>
+	<div id="verses"></div>
+	
+	<div>
+		<button onclick="panelChannel.postMessage({name: 'PREV-VERSE'})">Previous Verse</button>
+		<button onclick="panelChannel.postMessage({name: 'NEXT-VERSE'})">Next Verse</button>
+	</div>
+	
+	<script>
+	const singAlongControl = new SingAlongControl();
+	document.singAlongControl = singAlongControl;
+	</script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="us-en">
+<head>
+    <script>
+	const sourceChannel = new BroadcastChannel('obs-sing-along-source-channel');
+	const panelChannel = new BroadcastChannel('obs-sing-along-panel-channel');
+	
+	panelChannel.onmessage = (ev) => singAlong.handleControlEvent(ev);
+	
+	class SingAlong {
+		song = null;
+		currentVerseIndex = 0;
+		verseCount = 0;
+		
+		loadHymn(filename) {
+			this.song = hymn;
+			this.verseCount = this.song.verses.length;
+			sourceChannel.postMessage({name: "SONG-LOADED", verseCount: this.verseCount});
+		};
+		
+		selectVerse(index) {
+			if(index >= 0 && index < this.verseCount) {
+				this.currentVerseIndex = index;
+				this.showVerse();
+			} else {
+				console.error(`The given verse index is out of range! ${index}`);
+			}
+		};
+		
+		showTitle({title} = song) {
+			document.getElementById("title").innerText = title;
+		};
+		
+		showVerse() {
+			var innerHtml = "";
+			console.log(this.currentVerseIndex);
+			this.song.verses[this.currentVerseIndex].lines.forEach(line => { innerHtml += `<div>${line}</div>` });
+			document.getElementById("lyrics").innerHTML = innerHtml;
+		};
+		
+		prevVerse() {
+			this.changeVerse(-1);
+			this.showVerse();
+		};
+
+		nextVerse() {
+			this.changeVerse(1);
+			this.showVerse();
+		};
+		
+		changeVerse(offset) {
+			this.currentVerseIndex = (this.currentVerseIndex + offset + this.verseCount) % this.verseCount;
+			sourceChannel.postMessage({name: "VERSE-SELECTED", selectedVerse: this.currentVerseIndex + 1});
+		};
+		
+		listVerses() {
+			this.song.verses;
+		};
+		
+		handleControlEvent(ev) {
+			console.log(`Sing Along browser source received a message: ${JSON.stringify(ev.data, null, 3)}`);
+			
+			const {name, songFile, index} = ev.data;
+			
+			switch(name) {
+				case "LOAD-SONG": {
+					console.log(`Loading song: ${songFile}`);
+					break;
+				}
+				
+				case "NEXT-VERSE": {
+					console.log("Moving to next verse");
+					singAlong.nextVerse();
+					break;
+				}
+				
+				case "PREV-VERSE": {
+					console.log("Moving to previous verse");
+					singAlong.prevVerse();
+					break;
+				}
+
+				case "SELECT-VERSE": {
+					console.log(`Selecting verse ${index}`);
+					singAlong.selectVerse(index);
+					break;
+				}
+
+				default: {
+					console.log(`Sing Along source received a message: ${JSON.stringify(ev.data, null, 3)}`);
+					break;
+				}
+			}
+		}
+	}
+	
+	const hymn = {
+		title: "First Hymn", 
+		verses: [
+			{
+				lines: [
+					"1 first line",
+					"1 second line",
+					"1 third line",
+					"1 fourth line"
+				]
+			},
+			{
+				lines: [
+					"2 first line",
+					"2 second line",
+					"2 third line",
+					"2 fourth line"
+				]
+			},
+			{
+				lines: [
+					"3 first line",
+					"3 second line",
+					"3 third line",
+					"3 fourth line"
+				]
+			},
+			{
+				lines: [
+					"4 first line",
+					"4 second line",
+					"4 third line",
+					"4 fourth line"
+				]
+			},
+			{
+				lines: [
+					"5 first line",
+					"5 second line",
+					"5 third line",
+					"5 fourth line"
+				]
+			}
+		]
+	}
+    </script>
+    <title>Sing Along</title>
+</head>
+<body>
+	<main>
+		<header id="title"></header>
+		<article id="lyrics"></article>
+	</main>
+	
+	<button onclick="singAlong.prevVerse()">Previous Verse</button>
+	<button onclick="singAlong.nextVerse()">Next Verse</button>
+	
+	<script>
+	const singAlong = new SingAlong();
+	document.SingAlong = singAlong;
+	singAlong.loadHymn("");
+	singAlong.showVerse();
+	</script>
+</body>
+</html>
