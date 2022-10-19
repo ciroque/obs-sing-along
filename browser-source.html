@@ -27,14 +27,13 @@
 			}
 		};
 		
-		showTitle({title} = song) {
-			document.getElementById("title").innerText = title;
+		showTitle() {
+			document.getElementById("title").innerText = `#${this.song.number}: ${this.song.title}`;
 		};
 		
 		showVerse() {
-			var innerHtml = "";
+			var innerHtml = `<div>${this.song.verses[this.currentVerseIndex]}</div>`;
 			console.log(this.currentVerseIndex);
-			this.song.verses[this.currentVerseIndex].lines.forEach(line => { innerHtml += `<div>${line}</div>` });
 			document.getElementById("lyrics").innerHTML = innerHtml;
 		};
 		
@@ -96,66 +95,37 @@
 	}
 	
 	const hymn = {
-		title: "First Hymn", 
+    number: 67,
+		title: "Glory to God on High", 
 		verses: [
-			{
-				lines: [
-					"1 first line",
-					"1 second line",
-					"1 third line",
-					"1 fourth line"
-				]
-			},
-			{
-				lines: [
-					"2 first line",
-					"2 second line",
-					"2 third line",
-					"2 fourth line"
-				]
-			},
-			{
-				lines: [
-					"3 first line",
-					"3 second line",
-					"3 third line",
-					"3 fourth line"
-				]
-			},
-			{
-				lines: [
-					"4 first line",
-					"4 second line",
-					"4 third line",
-					"4 fourth line"
-				]
-			},
-			{
-				lines: [
-					"5 first line",
-					"5 second line",
-					"5 third line",
-					"5 fourth line"
-				]
-			}
+      "Glory to God on high! Let heav’n and earth reply. Praise ye his name. His love and grace adore, Who all our sorrows bore. Sing aloud evermore: Worthy the Lamb!",
+      "Jesus, our Lord and God, Bore sin’s tremendous load. Praise ye his name. Tell what his arm has done, What spoils from death he won. Sing his great name alone: Worthy the Lamb!",
+      " Let all the hosts above Join in one song of love, Praising his name. To him ascribed be Honor and majesty, Thru all eternity: Worthy the Lamb!"
 		]
 	}
     </script>
     <style>
-    html, body { width: 100%; overflow: hidden; }
+    html, body { 
+      width: 100%; 
+      overflow: hidden; 
+    }
     html { height: 360px; }
     body {
-      color: #FAFAFA;
-      font-family: georgian seriff;
+      background-color: rgb(242, 242, 242, 0.65);
+      color: #FDFDFD;
+      font-family: Georgia;
       min-height: 100%;
     }
     
     header {
       font-size: 48pt;
+      margin-bottom: 0.25em;
     }
     
     article {
       font-size: 42pt;
+      margin-left: 0.5em;
+      margin-right: 0.5em;
     }
     </style>
     <title>Sing Along</title>
@@ -163,18 +133,14 @@
 <body>
 	<main>
 		<header id="title">#120 Song Name</header>
-		<article id="lyrics">
-      <div>line one</div>
-      <div>line two</div>
-      <div>line three</div>
-      <div>line four</div>
-    </article>
+		<article id="lyrics"></article>
 	</main>
 	
 	<script>
 	const singAlong = new SingAlong();
 	document.SingAlong = singAlong;
 	singAlong.loadSong();
+  singAlong.showTitle();
 	singAlong.showVerse();
 	</script>
 </body>
