@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="us-en">
 <head>
     <script>
@@ -12,7 +12,7 @@
 		currentVerseIndex = 0;
 		verseCount = 0;
 		
-		loadHymn(filename) {
+		loadSong(filename) {
 			this.song = hymn;
 			this.verseCount = this.song.verses.length;
 			sourceChannel.postMessage({name: "SONG-LOADED", verseCount: this.verseCount});
@@ -65,6 +65,7 @@
 			switch(name) {
 				case "LOAD-SONG": {
 					console.log(`Loading song: ${songFile}`);
+          singAlong.loadSong();
 					break;
 				}
 				
@@ -140,21 +141,40 @@
 		]
 	}
     </script>
+    <style>
+    html, body { width: 100%; overflow: hidden; }
+    html { height: 360px; }
+    body {
+      color: #FAFAFA;
+      font-family: georgian seriff;
+      min-height: 100%;
+    }
+    
+    header {
+      font-size: 48pt;
+    }
+    
+    article {
+      font-size: 42pt;
+    }
+    </style>
     <title>Sing Along</title>
 </head>
 <body>
 	<main>
-		<header id="title"></header>
-		<article id="lyrics"></article>
+		<header id="title">#120 Song Name</header>
+		<article id="lyrics">
+      <div>line one</div>
+      <div>line two</div>
+      <div>line three</div>
+      <div>line four</div>
+    </article>
 	</main>
-	
-	<button onclick="singAlong.prevVerse()">Previous Verse</button>
-	<button onclick="singAlong.nextVerse()">Next Verse</button>
 	
 	<script>
 	const singAlong = new SingAlong();
 	document.SingAlong = singAlong;
-	singAlong.loadHymn("");
+	singAlong.loadSong();
 	singAlong.showVerse();
 	</script>
 </body>
