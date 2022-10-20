@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="us-en">
 <head>
+  <script src="./lds-hymns.js"></script>
 	<script>
 	const sourceChannel = new BroadcastChannel('obs-sing-along-source-channel');
 	const panelChannel = new BroadcastChannel('obs-sing-along-panel-channel');
@@ -8,6 +9,25 @@
 	sourceChannel.onmessage = (ev) => singAlongControl.handleSourceEvent(ev);
 
 	class SingAlongControl {
+    songList = document.getElementById("songs");
+    
+    loadSong() {
+      const song = hymns[this.songList.selectedIndex];
+      panelChannel.postMessage({name: "LOAD-SONG", song: song})
+    };
+    
+    loadSongs() {
+      const appendOption = ({number, name}, index) => {
+        var option = document.createElement("option");
+        option.text = `#${number}: ${name}`;
+        option.value = index;
+        this.songList.appendChild(option);
+      };
+      
+      
+      hymns.forEach(appendOption);
+    };
+  
 		handleSourceEvent(ev) {
 			
 			const {name, verseCount, selectedVerse} = ev.data;
@@ -44,24 +64,28 @@
 	</script>
 	<style>
 		.verseNumber {
-			margin: 1.25em;
-			padding: 1.25em;
+			margin: 0.25em;
+			padding: 0.5em;
 			border: solid 1px #F3F3F3;
+      cursor: pointer;
 		}
 	</style>
 </head>
 <body>
 	<div id="verses"></div>
-	
+	<hr/>
 	<div>
-		<button onclick="panelChannel.postMessage({name: 'LOAD-SONG'})">Load Song</button>
+		<button onclick="singAlongControl.loadSong()">Load Song</button>
 		<button onclick="panelChannel.postMessage({name: 'PREV-VERSE'})">Previous Verse</button>
 		<button onclick="panelChannel.postMessage({name: 'NEXT-VERSE'})">Next Verse</button>
 	</div>
+  
+  <select id="songs"></select>
 	
 	<script>
 	const singAlongControl = new SingAlongControl();
 	document.singAlongControl = singAlongControl;
+  singAlongControl.loadSongs();
 	</script>
 </body>
 </html>

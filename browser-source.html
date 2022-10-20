@@ -12,10 +12,12 @@
 		currentVerseIndex = 0;
 		verseCount = 0;
 		
-		loadSong(filename) {
-			this.song = hymn;
-			this.verseCount = this.song.verses.length;
+		loadSong(song) {
+			this.song = song;
+			this.verseCount = song.lines.length;
 			sourceChannel.postMessage({name: "SONG-LOADED", verseCount: this.verseCount});
+      this.selectVerse(0);
+      this.showTitle();
 		};
 		
 		selectVerse(index) {
@@ -23,19 +25,20 @@
 				this.currentVerseIndex = index;
 				this.showVerse();
 			} else {
+				alert(`The given verse index is out of range! ${index}`);
 				console.error(`The given verse index is out of range! ${index}`);
 			}
 		};
 		
 		showTitle() {
       const num = this.song.number ? `#${this.song.number}:` : "";
-			document.getElementById("title").innerText = `${num} ${this.song.title}`;
+			document.getElementById("title").innerText = `${num} ${this.song.name}`;
 		};
 		
 		showVerse() {
       const ele = document.getElementById("lyrics");
       ele.className = "fade";
-			var innerHtml = `<div>${this.song.verses[this.currentVerseIndex]}</div>`;
+			var innerHtml = `<div>${this.song.lines[this.currentVerseIndex]}</div>`;
       
       function updateAndFadeIn() {
         ele.innerHTML = innerHtml;
@@ -68,12 +71,14 @@
 		handleControlEvent(ev) {
 			console.log(`Sing Along browser source received a message: ${JSON.stringify(ev.data, null, 3)}`);
 			
-			const {name, songFile, index} = ev.data;
+			const {name, song, index} = ev.data;
+      
+			//alert(`name: ${name}, song: ${JSON.stringify(song)}`);
 			
-			switch(name) {
+      switch(name) {
 				case "LOAD-SONG": {
-					console.log(`Loading song: ${songFile}`);
-          singAlong.loadSong();
+					//alert(`Loading song: ${song}`);
+          singAlong.loadSong(song);
 					break;
 				}
 				
@@ -85,6 +90,7 @@
 				
 				case "PREV-VERSE": {
 					console.log("Moving to previous verse");
+					alert("Moving to previous verse");
 					singAlong.prevVerse();
 					break;
 				}
@@ -161,16 +167,13 @@
 </head>
 <body>
 	<main>
-		<header id="title">#120 Song Name</header>
+		<header id="title"></header>
 		<article id="lyrics"></article>
 	</main>
 	
 	<script>
 	const singAlong = new SingAlong();
 	document.SingAlong = singAlong;
-	singAlong.loadSong();
-  singAlong.showTitle();
-	singAlong.showVerse();
 	</script>
 </body>
 </html>
