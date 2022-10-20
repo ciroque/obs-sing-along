@@ -1384,18 +1384,6 @@ const hymns = [
   },
   {
     "lines": [
-      "Ere you left your room this morning, Did you think to pray? In the name of Christ, our Savior, Did you sue for loving favor As a shield today?",
-      "Oh, how praying rests the weary! Prayer will change the night to day. So, when life gets dark and dreary, Don't forget to pray.",
-      "When your heart was filled with anger, Did you think to pray? Did you plead for grace, my brother, That you might forgive another Who had crossed your way?",
-      "Oh, how praying rests the weary! Prayer will change the night to day. So, when life gets dark and dreary, Don't forget to pray.",
-      "When sore trials came upon you, Did you think to pray? When your soul was full of sorrow, Balm of Gilead did you borrow At the gates of day?",
-      "Oh, how praying rests the weary! Prayer will change the night to day. So, when life gets dark and dreary, Don't forget to pray."
-    ],
-    "name": "Did You Think to Pray?",
-    "number": 140
-  },
-  {
-    "lines": [
       "Jesus, the very thought of thee With sweetness fills my breast; But sweeter far thy face to see And in thy presence rest.",
       "Nor voice can sing, nor heart can frame, Nor can the mem'ry find A sweeter sound than thy blest name, O Savior of mankind!",
       "O hope of ev'ry contrite heart, O joy of all the meek, To those who fall, how kind thou art! How good to those who seek!",
