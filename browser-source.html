@@ -24,6 +24,7 @@
 			if(index >= 0 && index < this.verseCount) {
 				this.currentVerseIndex = index;
 				this.showVerse();
+        sourceChannel.postMessage({name: "VERSE-SELECTED", selectedVerse: index});
 			} else {
 				alert(`The given verse index is out of range! ${index}`);
 				console.error(`The given verse index is out of range! ${index}`);
@@ -61,7 +62,7 @@
 		
 		changeVerse(offset) {
 			this.currentVerseIndex = (this.currentVerseIndex + offset + this.verseCount) % this.verseCount;
-			sourceChannel.postMessage({name: "VERSE-SELECTED", selectedVerse: this.currentVerseIndex + 1});
+			sourceChannel.postMessage({name: "VERSE-SELECTED", selectedVerse: this.currentVerseIndex});
 		};
 		
 		listVerses() {
@@ -104,25 +105,6 @@
 			}
 		}
 	}
-	
-	const hymn = {
-    number: 67,
-		title: "Glory to God on High", 
-		verses: [
-      "Glory to God on high! Let heav’n and earth reply. Praise ye his name. His love and grace adore, Who all our sorrows bore. Sing aloud evermore: Worthy the Lamb!",
-      "Jesus, our Lord and God, Bore sin’s tremendous load. Praise ye his name. Tell what his arm has done, What spoils from death he won. Sing his great name alone: Worthy the Lamb!",
-      " Let all the hosts above Join in one song of love, Praising his name. To him ascribed be Honor and majesty, Thru all eternity: Worthy the Lamb!"
-		]
-	}
-
-	const hymn2 = {
-		title: "Glory to God on High", 
-		verses: [
-      "Glory to God on high! Let heav’n and earth reply. Praise ye his name. His love and grace adore, Who all our sorrows bore. Sing aloud evermore: Worthy the Lamb!",
-      "Jesus, our Lord and God, Bore sin’s tremendous load. Praise ye his name. Tell what his arm has done, What spoils from death he won. Sing his great name alone: Worthy the Lamb!",
-      " Let all the hosts above Join in one song of love, Praising his name. To him ascribed be Honor and majesty, Thru all eternity: Worthy the Lamb!"
-		]
-	}
     </script>
     <style>
     html, body { 
@@ -131,19 +113,15 @@
     }
     html { height: 360px; }
     body {
-      background-color: rgb(42, 42, 42, 0.75);
+      background-color: rgb(42, 42, 42, 0.9);
       color: #F2F2F2;
-      font-family: Arial;
+      font-family: Garamond serif;
       min-height: 100%;
-    }
-    
-    header {
-      font-size: 48pt;
-      margin-bottom: 0.25em;
+      padding: 0.5em;
     }
     
     article {
-      font-size: 42pt;
+      font-size: 38pt;
       margin-left: 0.5em;
       margin-right: 0.5em;
     }
@@ -158,6 +136,13 @@
     article#lyrics.fade {
       opacity: 0;
     }    
+
+    
+    header {
+      font-size: 42pt;
+      /*margin-bottom: 0.25em;*/
+      padding: 0.25em;
+    }
     </style>
     <title>Sing Along</title>
 </head>

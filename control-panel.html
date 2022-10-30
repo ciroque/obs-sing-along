@@ -41,6 +41,8 @@
 			
 				case "VERSE-SELECTED": {
 					console.log(`Verse selected: ${selectedVerse}`);
+					//alert(`Verse selected: ${selectedVerse}`);
+          this.hilightVerse(selectedVerse);
 					break;
 				}
 				
@@ -51,36 +53,87 @@
 			}
 		};
 		
+    hilightVerse(index) {
+      const ele = document.getElementById("verses");
+      const verseEles = ele.getElementsByTagName("span");
+      for(var i = 0; i < verseEles.length; i++) { verseEles[i].className = "verse-num"; }
+      verseEles[index].className = "verse-num-a";
+    }
+    
 		selectVerse(index) {
 			panelChannel.postMessage({name: "SELECT-VERSE", index: index});
 		};
 		
 		showVerseNumbers(count) {
-			var innerHtml = "";
-			for(var i = 1; i <= count; i++) { innerHtml += `<span class="verseNumber" onclick="singAlongControl.selectVerse(${i - 1})">${i}</span>` };
-			document.getElementById("verses").innerHTML = innerHtml;
+			var innerHtml = "<div class=\"verse-lbl\">Verses:</div>";
+			for(var i = 0; i < count; i++) { 
+        innerHtml += `<span class="verse-num" onclick="singAlongControl.selectVerse(${i})">${i + 1}</span>` 
+      };		
+      document.getElementById("verses").innerHTML = innerHtml;
 		};
 	}
 	</script>
 	<style>
-		.verseNumber {
+    :root {
+      --interface-size: 1;
+      --obs-background: #3a393a;
+    }
+ 
+    body {
+      background: var(--obs-background);
+      color: var(--main-color);
+    }
+    
+    .btn-bar {
+      margin-top: 0.5em;
+    }
+    
+    .verse-lbl {
+      color: white;
+      font-weight: bold;
+      padding: 0.5em 0.5em 0.5em 0em;
+      margin-bottom: 0.25em;
+    }
+    
+		.verse-num {
+      background-color: #6F6F6F;
+			border: outset 1px #F3F3F3;
+      color: white;
+      cursor: pointer;
 			margin: 0.25em;
 			padding: 0.5em;
-			border: solid 1px #F3F3F3;
-      cursor: pointer;
 		}
+    
+		.verse-num-a {
+      background-color: #0F0F0F;
+			border: inset 1px #F3F3F3;
+      color: yellow;
+      cursor: pointer;
+			margin: 0.25em;
+			padding: 0.5em;
+		}
+    
+    #songs {
+      margin-top: 0.5em;
+    }
+    
+    #verses {
+      padding: 0.5em 0.5em 0.5em 0em;
+    }
 	</style>
 </head>
 <body>
-	<div id="verses"></div>
-	<hr/>
-	<div>
+  
+  <select id="songs"></select>
+
+	<div class="btn-bar">
 		<button onclick="singAlongControl.loadSong()">Load Song</button>
 		<button onclick="panelChannel.postMessage({name: 'PREV-VERSE'})">Previous Verse</button>
 		<button onclick="panelChannel.postMessage({name: 'NEXT-VERSE'})">Next Verse</button>
 	</div>
-  
-  <select id="songs"></select>
+
+	<div id="verses">
+  </div>
 	
 	<script>
 	const singAlongControl = new SingAlongControl();

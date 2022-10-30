@@ -957,7 +957,7 @@ const hymns = [
   },
   {
     "lines": [
-      "Lead, kindly Light, amid th'encircling gloom;  Lead thou me on!  The night is dark, and I am far from home;  Lead thou me on!  Keep thou my feet; I do not ask to see  The distant scene—one step enough for me.",
+      "Lead, kindly Light, amid th'encircling gloom;  Lead thou me on!  The night is dark, and I am far from home;  Lead thou me on!  Keep thou my feet; I do not ask to see  The distant scene-one step enough for me.",
       "I was not ever thus, nor pray'd that thou  Shouldst lead me on. I loved to choose and see my path; but now, Lead thou me on!  I loved the garish day, and, spite of fears, Pride ruled my will. Remember not past years.",
       "So long thy pow'r hath blest me, sure it still  Will lead me on  O'er moor and fen, o'er crag and torrent, till  The night is gone. And with the morn those angel faces smile, Which I have loved long since, and lost awhile!"
     ],
@@ -1333,7 +1333,7 @@ const hymns = [
       "I know that my Redeemer lives. What comfort this sweet sentence gives!  He lives, he lives, who once was dead. He lives, my ever-living Head. He lives to bless me with his love. He lives to plead for me above. He lives my hungry soul to feed. He lives to bless in time of need.",
       "He lives to grant me rich supply. He lives to guide me with his eye. He lives to comfort me when faint. He lives to hear my soul's complaint. He lives to silence all my fears. He lives to wipe away my tears. He lives to calm my troubled heart. He lives all blessings to impart.",
       "He lives, my kind, wise heav'nly Friend. He lives and loves me to the end. He lives, and while he lives, I'll sing. He lives, my Prophet, Priest, and King. He lives and grants me daily breath. He lives, and I shall conquer death. He lives my mansion to prepare. He lives to bring me safely there.",
-      "He lives! All glory to his name!  He lives, my Savior, still the same. Oh, sweet the joy this sentence gives:  \"I know that my Redeemer lives!\"  He lives! All glory to his name!  He lives, my Savior, still the same. Oh, sweet the joy this sentence gives:  \"I know that my Redeemer lives!\""
+      "He lives! All glory to his name!  He lives, my Savior, still the same. Oh, sweet the joy this sentence gives:  &ldquo;I know that my Redeemer lives!&rdquo;  He lives! All glory to his name!  He lives, my Savior, still the same. Oh, sweet the joy this sentence gives:  &ldquo;I know that my Redeemer lives!&rdquo;"
     ],
     "name": "I Know That My Redeemer Lives",
     "number": 136
@@ -1843,10 +1843,10 @@ const hymns = [
   },
   {
     "lines": [
-      "When in the wondrous realms above Our Savior had been called upon To save our world of sin by love, He said, “Thy will, O Lord, be done.”",
-      "The King of Kings left worlds of light, Became the meek and lowly One; In brightest day or darkest night, He said, “Thy will, O Lord, be done.”",
-      "No crown of thorns, no cruel cross Could make our great Redeemer shun. He counted his own will but naught, And said, “Thy will, O Lord, be done.”",
-      "We take the bread and cup this day In mem'ry of the sinless One, And pray for strength, that we may say, As he, “Thy will, O Lord, be done.”"
+      "When in the wondrous realms above Our Savior had been called upon To save our world of sin by love, He said, &ldquo;Thy will, O Lord, be done.&rdquo;",
+      "The King of Kings left worlds of light, Became the meek and lowly One; In brightest day or darkest night, He said, &ldquo;Thy will, O Lord, be done.&rdquo;",
+      "No crown of thorns, no cruel cross Could make our great Redeemer shun. He counted his own will but naught, And said, &ldquo;Thy will, O Lord, be done.&rdquo;",
+      "We take the bread and cup this day In mem'ry of the sinless One, And pray for strength, that we may say, As he, &ldquo;Thy will, O Lord, be done.&rdquo;"
     ],
     "name": "Thy Will, O Lord, Be Done",
     "number": 188
