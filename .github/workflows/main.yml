@@ -1,0 +1,10 @@
+name: create-zip-archive
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+jobs:
+  create-zip-archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r obs-sing-along-${{github.run_number}}.zip /
