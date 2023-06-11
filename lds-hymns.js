@@ -5,7 +5,7 @@ const hymns = [
       "The clouds of error disappear Before the rays of truth divine; The glory bursting from afar, The glory bursting from afar Wide o'er the nations soon will shine.",
       "The Gentile fulness now comes in, And Israel's blessings are at hand. Lo, Judah's remnant, cleansed from sin, Lo, Judah's remnant, cleansed from sin, Shall in their promised Canaan stand.",
       "Jehovah speaks! Let earth give ear, And Gentile nations turn and live. His mighty arm is making bare, His mighty arm is making bare His cov'nant people to receive.",
-      "—Angels from heav'n and truth from earth Have met, and both have record borne; Thus Zion's light is bursting forth, Thus Zion's light is bursting forth To bring her ransomed children home."
+      "Angels from heav'n and truth from earth Have met, and both have record borne; Thus Zion's light is bursting forth, Thus Zion's light is bursting forth To bring her ransomed children home."
     ],
     "name": "The Morning Breaks",
     "number": 1
@@ -23,9 +23,12 @@ const hymns = [
   },
   {
     "lines": [
-      "Now let us rejoice in the day of salvation. No longer as strangers on earth need we roam. Good tidings are sounding to us and each nation, And shortly the hour of redemption will come, When all that was promised the Saints will be given, And none will molest them from morn until ev'n, And earth will appear as the Garden of Eden, And Jesus will say to all Israel, “Come home.”",
-      "We'll love one another and never dissemble But cease to do evil and ever be one. And when the ungodly are fearing and tremble, We'll watch for the day when the Savior will come, When all that was promised the Saints will be given, And none will molest them from morn until ev'n, And earth will appear as the Garden of Eden, And Jesus will say to all Israel, “Come home.”",
-      "In faith we'll rely on the arm of Jehovah To guide thru these last days of trouble and gloom, And after the scourges and harvest are over, We'll rise with the just when the Savior doth come. Then all that was promised the Saints will be given, And they will be crown'd with the angels of heav'n, And earth will appear as the Garden of Eden, And Christ and his people will ever be one."
+      "Now let us rejoice in the day of salvation. No longer as strangers on earth need we roam. Good tidings are sounding to us and each nation, And shortly the hour of redemption will come,",
+			"When all that was promised the Saints will be given, And none will molest them from morn until ev'n, And earth will appear as the Garden of Eden, And Jesus will say to all Israel, &ldquo;Come home.&rdquo;",
+      "We'll love one another and never dissemble But cease to do evil and ever be one. And when the ungodly are fearing and tremble, We'll watch for the day when the Savior will come,",
+			"When all that was promised the Saints will be given, And none will molest them from morn until ev'n, And earth will appear as the Garden of Eden, And Jesus will say to all Israel, &ldquo;Come home.&rdquo;",
+      "In faith we'll rely on the arm of Jehovah To guide thru these last days of trouble and gloom, And after the scourges and harvest are over, We'll rise with the just when the Savior doth come.",
+			"Then all that was promised the Saints will be given, And they will be crown'd with the angels of heav'n, And earth will appear as the Garden of Eden, And Christ and his people will ever be one."
     ],
     "name": "Now Let Us Rejoice",
     "number": 3
@@ -165,7 +168,7 @@ const hymns = [
       "Awake, ye Saints of God, awake! Call on the Lord in mighty prayer That he will Zion's bondage break And bring to naught the tempter's snare, And bring to naught the tempter's snare.",
       "Tho Zion's foes have counseled deep, Although they bind with fetters strong, The God of Jacob does not sleep; His vengeance will not slumber long; His vengeance will not slumber long.",
       "With constant faith and fervent prayer, With deep humility of soul, With steadfast mind and heart, prepare To see th'eternal purpose roll, To see th'eternal purpose roll.",
-      "Awake to righteousness; be one, Or, saith the Lord, “Ye are not mine!” Yea, like the Father and the Son, Let all the Saints in union join. Let all the Saints in union join."
+      "Awake to righteousness; be one, Or, saith the Lord, &ldquo;Ye are not mine!&rdquo; Yea, like the Father and the Son, Let all the Saints in union join. Let all the Saints in union join."
     ],
     "name": "Awake, Ye Saints of God, Awake!",
     "number": 17
@@ -200,7 +203,7 @@ const hymns = [
     "lines": [
       "Come, listen to a prophet's voice, And hear the word of God, And in the way of truth rejoice, And sing for joy aloud. We've found the way the prophets went Who lived in days of yore. Another prophet now is sent This knowledge to restore.",
       "The gloom of sullen darkness spread Thru earth's extended space Is banished by our living Head, And God has shown his face. Thru erring schemes in days now past The world has gone astray; Yet Saints of God have found at last The straight and narrow way.",
-      "'Tis not in man they put their trust Nor on his arm rely. Full well assured, all are accursed Who Jesus Christ deny. The Savior to his people saith, “Let all my words obey, And signs shall follow living faith, Down to the latest day.”",
+      "'Tis not in man they put their trust Nor on his arm rely. Full well assured, all are accursed Who Jesus Christ deny. The Savior to his people saith, &ldquo;Let all my words obey, And signs shall follow living faith, Down to the latest day.&rdquo;",
       "Then heed the words of truth and light That flow from fountains pure. Yea, keep His law with all thy might Till thine election's sure, Till thou shalt hear the holy voice Assure eternal reign, While joy and cheer attend thy choice, As one who shall obtain."
     ],
     "name": "Come, Listen to a Prophet's Voice",
@@ -235,7 +238,7 @@ const hymns = [
   },
   {
     "lines": [
-      "Now we'll sing with one accord, For a prophet of the Lord, Bringing forth his precious word, Cheers the Saints as anciently. When the world in darkness lay, Lo! he sought the better way, And he heard the Savior say, “Go and prune my vineyard, son!”",
+      "Now we'll sing with one accord, For a prophet of the Lord, Bringing forth his precious word, Cheers the Saints as anciently. When the world in darkness lay, Lo! he sought the better way, And he heard the Savior say, &ldquo;Go and prune my vineyard, son!&rdquo;",
       "And an angel surely then, For a blessing unto men, Brought the priesthood back again In its ancient purity. Even Joseph he inspired; Yea, his heart he truly fired With the light that he desired For the work of righteousness.",
       "And the Book of Mormon true, With its cov'nant ever new, For the Gentile and the Jew, He translated sacredly. God's commandments to mankind, For believing Saints designed, And to bless the seeking mind, Came to him from Jesus Christ.",
       "Precious are the years to come, While the righteous gather home For the great millennium, When they'll rest in blessedness. Prudent in this world of woes, They will triumph o'er their foes, While the realm of Zion grows Purer for eternity."
@@ -469,7 +472,7 @@ const hymns = [
     "lines": [
       "Glorious things are sung of Zion, Enoch's city seen of old, Where the righteous, being perfect, Walked with God in streets of gold. Love and virtue, faith and wisdom, Grace and gifts were all combined. As himself each loved his neighbor; All were one in heart and mind.",
       "There they shunn'd the pow'r of Satan And observed celestial laws; For in Adam-ondi-Ahman Zion rose where Eden was. When beyond the pow'r of evil, So that none could covet wealth, One continual feast of blessings Crown'd their days with peace and health.",
-      "Then the tow'rs of Zion glittered Like the sun in yonder skies, And the wicked stood and trembled, Filled with wonder and surprise. Then their faith and works were perfect; Lo, they followed their great Head! So the city went to heaven, And the world said, “Zion's fled!”",
+      "Then the tow'rs of Zion glittered Like the sun in yonder skies, And the wicked stood and trembled, Filled with wonder and surprise. Then their faith and works were perfect; Lo, they followed their great Head! So the city went to heaven, And the world said, &ldquo;Zion's fled!&rdquo;",
       "When the Lord returns with Zion, And we hear the watchman cry, Then we'll surely be united, And we'll all see eye to eye. Then we'll mingle with the angels, And the Lord will bless his own. Then the earth will be as Eden, And we'll know as we are known."
     ],
     "name": "Glorious Things Are Sung of Zion",
@@ -625,7 +628,7 @@ const hymns = [
       "Alleluia, Alleluia, Bright and clear our voices ring, Singing songs of exultation To our Maker, Lord, and King!",
       "Open wide the fount of Zion; Let her richest blessings flow To the Saints who nobly serve thee In the gospel here below.",
       "Alleluia, Alleluia, Bright and clear our voices ring, Singing songs of exultation To our Maker, Lord, and King!",
-      "May we labor in the kingdom— By the prophets long foretold— Where the children of the promise Shall be gathered in the fold.",
+      "May we labor in the kingdom, By the prophets long foretold, Where the children of the promise Shall be gathered in the fold.",
       "Alleluia, Alleluia, Bright and clear our voices ring, Singing songs of exultation To our Maker, Lord, and King!"
     ],
     "name": "On This Day of Joy and Gladness",
@@ -634,7 +637,7 @@ const hymns = [
   {
     "lines": [
       "Come, all ye Saints who dwell on earth, Your cheerful voices raise, Our great Redeemer's love to sing, And celebrate his praise, Our great Redeemer's love to sing, And celebrate his praise.",
-      "His love is great; he died for us. Shall we ungrateful be, Since he has marked a road to bliss And said, “Come, follow me,” Since he has marked a road to bliss And said, “Come, follow me”?",
+      "His love is great; he died for us. Shall we ungrateful be, Since he has marked a road to bliss And said, &ldquo;Come, follow me,&rdquo; Since he has marked a road to bliss And said, &ldquo;Come, follow me&rdquo;?",
       "The straight and narrow way we've found! Then let us travel on, Till we, in the celestial world, Shall meet where Christ is gone, Till we, in the celestial world, Shall meet where Christ is gone.",
       "And there we'll join the heav'nly choir And sing his praise above, While endless ages roll around, Perfected by his love, While endless ages roll around, Perfected by his love."
     ],
@@ -843,7 +846,7 @@ const hymns = [
   {
     "lines": [
       "How firm a foundation, ye Saints of the Lord, Is laid for your faith in his excellent word! What more can he say than to you he hath said, Who unto the Savior, who unto the Savior, Who unto the Savior for refuge have fled?",
-      "In ev'ry condition—in sickness, in health, In poverty's vale or abounding in wealth, At home or abroad, on the land or the sea— As thy days may demand, as thy days may demand, As thy days may demand, so thy succor shall be.",
+      "In ev'ry condition, in sickness, in health, In poverty's vale or abounding in wealth, At home or abroad, on the land or the sea, As thy days may demand, as thy days may demand, As thy days may demand, so thy succor shall be.",
       "Fear not, I am with thee; oh, be not dismayed, For I am thy God and will still give thee aid. I'll strengthen thee, help thee, and cause thee to stand, Upheld by my righteous, upheld by my righteous, Upheld by my righteous, omnipotent hand.",
       "When through the deep waters I call thee to go, The rivers of sorrow shall not thee o'erflow, For I will be with thee, thy troubles to bless, And sanctify to thee, and sanctify to thee, And sanctify to thee thy deepest distress.",
       "When through fiery trials thy pathway shall lie, My grace, all sufficient, shall be thy supply. The flame shall not hurt thee; I only design Thy dross to consume, thy dross to consume, Thy dross to consume and thy gold to refine.",
@@ -855,18 +858,9 @@ const hymns = [
   },
   {
     "lines": [
-      "Earth, with her ten thousand flow'rs, Air, with all its beams and show'rs, Heaven's infinite expanse, Sea's resplendent countenance—  All around and all above  Bear this record: God is love.",
-      "Sounds among the vales and hills, In the woods and by the rills, Of the breeze and of the bird, By the gentle murmur stirred—  Sacred songs, beneath, above, Have one chorus: God is love.",
-      "All the hopes that sweetly start  From the fountain of the heart, All the bliss that ever comes  To our earthly human homes, All the voices from above  Sweetly whisper: God is love."
-    ],
-    "name": "God Is Love",
-    "number": 87
-  },
-  {
-    "lines": [
-      "Earth, with her ten thousand flow'rs, Air, with all its beams and show'rs, Heaven's infinite expanse, Sea's resplendent countenance—  All around and all above  Bear this record: God is love.",
-      "Sounds among the vales and hills, In the woods and by the rills, Of the breeze and of the bird, By the gentle murmur stirred—  Sacred songs, beneath, above, Have one chorus: God is love.",
-      "All the hopes that sweetly start  From the fountain of the heart, All the bliss that ever comes  To our earthly human homes, All the voices from above  Sweetly whisper: God is love."
+      "Earth, with her ten thousand flow'rs, Air, with all its beams and show'rs, Heaven's infinite expanse, Sea's resplendent countenance, All around and all above  Bear this record: God is love.",
+      "Sounds among the vales and hills, In the woods and by the rills, Of the breeze and of the bird, By the gentle murmur stirred, Sacred songs, beneath, above, Have one chorus: God is love.",
+      "All the hopes that sweetly start  From the fountain of the heart, All the bliss that ever comes  To our earthly human homes, All the voices from above, Sweetly whisper: God is love."
     ],
     "name": "God Is Love",
     "number": 87
@@ -914,9 +908,11 @@ const hymns = [
   {
     "lines": [
       "For the beauty of the earth, For the beauty of the skies, For the love which from our birth  Over and around us lies,",
-      "[Chorus]  Lord of all, to thee we raise  This our hymn of grateful praise.",
+      "Lord of all, to thee we raise  This our hymn of grateful praise.",
       "For the beauty of each hour  Of the day and of the night, Hill and vale, and tree and flow'r, Sun and moon, and stars of light,",
-      "For the joy of human love, Brother, sister, parent, child, Friends on earth, and friends above, For all gentle thoughts and mild,"
+      "Lord of all, to thee we raise  This our hymn of grateful praise.",
+      "For the joy of human love, Brother, sister, parent, child, Friends on earth, and friends above, For all gentle thoughts and mild,",
+      "Lord of all, to thee we raise  This our hymn of grateful praise."
     ],
     "name": "For the Beauty of the Earth",
     "number": 92
@@ -1033,8 +1029,8 @@ const hymns = [
   {
     "lines": [
       "Jesus, Savior, pilot me Over life's tempestuous sea; Unknown waves before me roll, Hiding rock and treach'rous shoal. Chart and compass came from thee; Jesus, Savior, pilot me.",
-      "As a mother stills her child, Thou canst hush the ocean wild; Boist'rous waves obey thy will When thou say'st to them, “Be still!” Wondrous Sov'reign of the sea, Jesus, Savior, pilot me.",
-      "When at last I near the shore, And the fearful breakers roar 'Twixt me and the peaceful rest, Then, while leaning on thy breast, May I hear thee say to me, “Fear not; I will pilot thee.”"
+      "As a mother stills her child, Thou canst hush the ocean wild; Boist'rous waves obey thy will When thou say'st to them, &ldquo;Be still!&rdquo; Wondrous Sov'reign of the sea, Jesus, Savior, pilot me.",
+      "When at last I near the shore, And the fearful breakers roar 'Twixt me and the peaceful rest, Then, while leaning on thy breast, May I hear thee say to me, &ldquo;Fear not; I will pilot thee.&rdquo;"
     ],
     "name": "Jesus, Savior, Pilot Me",
     "number": 104
@@ -1155,7 +1151,7 @@ const hymns = [
       "Come unto Jesus, ye heavy laden, Careworn and fainting, by sin oppressed. He'll safely guide you unto that haven Where all who trust him may rest.",
       "Come unto Jesus; He'll ever heed you, Though in the darkness you've gone astray. His love will find you and gently lead you From darkest night into day.",
       "Come unto Jesus; He'll surely hear you, If you in meekness plead for his love. Oh, know you not that angels are near you From brightest mansions above?",
-      "Come unto Jesus from ev'ry nation, From ev'ry land and isle of the sea. Unto the high and lowly in station, Ever he calls, “Come to me.”"
+      "Come unto Jesus from ev'ry nation, From ev'ry land and isle of the sea. Unto the high and lowly in station, Ever he calls, &ldquo;Come to me.&rdquo;"
     ],
     "name": "Come unto Jesus",
     "number": 117
@@ -1201,9 +1197,9 @@ const hymns = [
     "lines": [
       "Though deep'ning trials throng your way, Press on, press on, ye Saints of God! Ere long the resurrection day Will spread its life and truth abroad, Will spread its life and truth abroad.",
       "Though outward ills await us here, The time, at longest, is not long Ere Jesus Christ will reappear, Surrounded by a glorious throng, Surrounded by a glorious throng.",
-      "Lift up your hearts in praise to God; Let your rejoicings never cease. Though tribulations rage abroad, Christ says, “In me ye shall have peace.” Christ says, “In me ye shall have peace.”",
+      "Lift up your hearts in praise to God; Let your rejoicings never cease. Though tribulations rage abroad, Christ says, &ldquo;In me ye shall have peace.&rdquo; Christ says, &ldquo;In me ye shall have peace.&rdquo;",
       "What though our rights have been assailed? What though by foes we've been despoiled? Jehovah's promise has not failed; Jehovah's purpose is not foiled. Jehovah's purpose is not foiled.",
-      "This work is moving on apace, And great events are rolling forth; The kingdom of the latter days, The “little stone,” must fill the earth. The “little stone,” must fill the earth.",
+      "This work is moving on apace, And great events are rolling forth; The kingdom of the latter days, The &ldquo;little stone,&rdquo; must fill the earth. The &ldquo;little stone,&rdquo; must fill the earth.",
       "Though Satan rage, 'tis all in vain; The words the ancient prophet spoke Sure as the throne of God remain; Nor men nor devils can revoke. Nor men nor devils can revoke.",
       "All glory to his holy name Who sends his faithful servants forth To prove the nations, to proclaim Salvation's tidings through the earth. Salvation's tidings through the earth."
     ],
@@ -1287,7 +1283,7 @@ const hymns = [
     "lines": [
       "More holiness give me, More strivings within, More patience in suff'ring, More sorrow for sin, More faith in my Savior, More sense of his care, More joy in his service, More purpose in prayer.",
       "More gratitude give me, More trust in the Lord, More pride in his glory, More hope in his word, More tears for his sorrows, More pain at his grief, More meekness in trial, More praise for relief.",
-      "More purity give me, More strength to o'ercome, More freedom from earth-stains, More longing for home. More fit for the kingdom, More used would I be, More blessed and holy— More, Savior, like thee."
+      "More purity give me, More strength to o'ercome, More freedom from earth-stains, More longing for home. More fit for the kingdom, More used would I be, More blessed and holy, More, Savior, like thee."
     ],
     "name": "More Holiness Give Me",
     "number": 131
@@ -1412,10 +1408,13 @@ const hymns = [
   {
     "lines": [
       "There is an hour of peace and rest, Unmarred by earthly care;  'Tis when before the Lord I go  And kneel in secret prayer.",
-      "[Chorus]  May my heart be turned to pray, Pray in secret day by day, That this boon to mortals giv'n  May unite my soul with heav'n.",
+      "May my heart be turned to pray, Pray in secret day by day, That this boon to mortals giv'n  May unite my soul with heav'n.",
       "The straight and narrow way to heav'n, Where angels bright and fair  Are singing to God's praise, is found  Thru constant secret prayer.",
+      "May my heart be turned to pray, Pray in secret day by day, That this boon to mortals giv'n  May unite my soul with heav'n.",
       "When sailing on life's stormy sea, 'Mid billows of despair, 'Tis solace to my soul to know  God hears my secret prayer.",
-      "When thorns are strewn along my path, And foes my feet ensnare, My Savior to my aid will come, If sought in secret prayer."
+      "May my heart be turned to pray, Pray in secret day by day, That this boon to mortals giv'n  May unite my soul with heav'n.",
+      "When thorns are strewn along my path, And foes my feet ensnare, My Savior to my aid will come, If sought in secret prayer.",
+      "May my heart be turned to pray, Pray in secret day by day, That this boon to mortals giv'n  May unite my soul with heav'n."
     ],
     "name": "Secret Prayer",
     "number": 144
@@ -1622,7 +1621,9 @@ const hymns = [
       "Abide with me; 'tis eventide. The day is past and gone;  The shadows of the evening fall;  The night is coming on. Within my heart a welcome guest, Within my home abide.",
       "[Chorus]  O Savior, stay this night with me;  Behold, 'tis eventide. O Savior, stay this night with me;  Behold, 'tis eventide.",
       "Abide with me; 'tis eventide. Thy walk today with me  Has made my heart within me burn, As I communed with thee. Thy earnest words have filled my soul  And kept me near thy side.",
-      "Abide with me; 'tis eventide, And lone will be the night  If I cannot commune with thee  Nor find in thee my light. The darkness of the world, I fear, Would in my home abide."
+      "[Chorus]  O Savior, stay this night with me;  Behold, 'tis eventide. O Savior, stay this night with me;  Behold, 'tis eventide.",
+      "Abide with me; 'tis eventide, And lone will be the night  If I cannot commune with thee  Nor find in thee my light. The darkness of the world, I fear, Would in my home abide.",
+      "[Chorus]  O Savior, stay this night with me;  Behold, 'tis eventide. O Savior, stay this night with me;  Behold, 'tis eventide."
     ],
     "name": "Abide with Me; 'Tis Eventide",
     "number": 165
@@ -1776,7 +1777,7 @@ const hymns = [
   {
     "lines": [
       "Jesus of Nazareth, Savior and King! Triumphant over death, Life thou didst bring, Leaving thy Father's throne, On earth to live, Thy work to do alone, Thy life to give.",
-      "While of this broken bread Humbly we eat, Our thoughts to thee are led In rev'rence sweet. Bruised, broken, torn for us On Calvary's hill— Thy suff'ring borne for us Lives with us still.",
+      "While of this broken bread Humbly we eat, Our thoughts to thee are led In rev'rence sweet. Bruised, broken, torn for us On Calvary's hill, Thy suff'ring borne for us Lives with us still.",
       "As to our lips the cup Gently we press, Our hearts are lifted up; Thy name we bless! Guide us where'er we go, Till in the end Life evermore we'll know Through thee, our Friend."
     ],
     "name": "Jesus of Nazareth, Savior and King",
@@ -1875,9 +1876,9 @@ const hymns = [
       "Behold the great Redeemer die, A broken law to satisfy. He dies a sacrifice for sin, He dies a sacrifice for sin, That man may live and glory win.",
       "While guilty men his pains deride, They pierce his hands and feet and side; And with insulting scoffs and scorns, And with insulting scoffs and scorns, They crown his head with plaited thorns.",
       "Although in agony he hung, No murm'ring word escaped his tongue. His high commission to fulfill, His high commission to fulfill, He magnified his Father's will.",
-      "“Father, from me remove this cup. Yet, if thou wilt, I'll drink it up. I've done the work thou gavest me, I've done the work thou gavest me; Receive my spirit unto thee.”",
-      "He died, and at the awful sight The sun in shame withdrew its light! Earth trembled, and all nature sighed, Earth trembled, and all nature sighed In dread response, “A God has died!”",
-      "He lives—he lives. We humbly now Around these sacred symbols bow And seek, as Saints of latter days, And seek, as Saints of latter days, To do his will and live his praise."
+      "&ldquo;Father, from me remove this cup. Yet, if thou wilt, I'll drink it up. I've done the work thou gavest me, I've done the work thou gavest me; Receive my spirit unto thee.&rdquo;",
+      "He died, and at the awful sight The sun in shame withdrew its light! Earth trembled, and all nature sighed, Earth trembled, and all nature sighed In dread response, &ldquo;A God has died!&rdquo;",
+      "He lives, he lives. We humbly now Around these sacred symbols bow And seek, as Saints of latter days, And seek, as Saints of latter days, To do his will and live his praise."
     ],
     "name": "Behold the Great Redeemer Die",
     "number": 191
@@ -2078,9 +2079,9 @@ const hymns = [
   },
   {
     "lines": [
-      "While shepherds watch'd their flocks by night, All seated on the ground, The angel of the Lord came down, And glory shone around. “Fear not,” said he, for mighty dread Had seized their troubled mind; “Glad tidings of great joy I bring To you and all mankind.”",
+      "While shepherds watch'd their flocks by night, All seated on the ground, The angel of the Lord came down, And glory shone around. &ldquo;Fear not,&rdquo; said he, for mighty dread Had seized their troubled mind; &ldquo;Glad tidings of great joy I bring To you and all mankind.&rdquo;",
       "“To you, in David's town this day, Is born of David's line The Savior who is Christ the Lord, And this shall be the sign: The heav'nly Babe you there shall find To human view displayed, All meanly wrapped in swathing bands, And in a manger laid.”",
-      "Thus spake the seraph, and forthwith Appeared a shining throng Of angels praising God, who thus Addressed their joyful song: “All glory be to God on high And on the earth be peace. Goodwill henceforth from heav'n to men Begin and never cease.”"
+      "Thus spake the seraph, and forthwith Appeared a shining throng Of angels praising God, who thus Addressed their joyful song: &ldquo;All glory be to God on high And on the earth be peace. Goodwill henceforth from heav'n to men Begin and never cease.&rdquo;"
     ],
     "name": "While Shepherds Watched Their Flocks",
     "number": 211
@@ -2112,8 +2113,8 @@ const hymns = [
     "lines": [
       "I heard the bells on Christmas day Their old familiar carols play, And wild and sweet the words repeat Of peace on earth, good will to men.",
       "I thought how, as the day had come, The belfries of all Christendom Had rolled along th'unbroken song Of peace on earth, good will to men.",
-      "And in despair I bowed my head: “There is no peace on earth,” I said, “For hate is strong and mocks the song Of peace on earth, good will to men.”",
-      "Then pealed the bells more loud and deep: “God is not dead, nor doth he sleep; The wrong shall fail, the right prevail, With peace on earth, good will to men.”",
+      "And in despair I bowed my head: &ldquo;There is no peace on earth,&rdquo; I said, &ldquo;For hate is strong and mocks the song Of peace on earth, good will to men.&rdquo;",
+      "Then pealed the bells more loud and deep: &ldquo;God is not dead, nor doth he sleep; The wrong shall fail, the right prevail, With peace on earth, good will to men.&rdquo;",
       "Till, ringing, singing, on its way, The world revolved from night to day, A voice, a chime, a chant sublime, Of peace on earth, good will to men!"
     ],
     "name": "I Heard the Bells on Christmas Day",
@@ -2233,7 +2234,7 @@ const hymns = [
       "Oh, there's sunshine, blessed sunshine When the peaceful happy moments roll. When Jesus shows his smiling face, There is sunshine in the soul.",
       "There is springtime in my soul today, For when the Lord is near, The dove of peace sings in my heart, The flow'rs of grace appear.",
       "Oh, there's sunshine, blessed sunshine When the peaceful happy moments roll. When Jesus shows his smiling face, There is sunshine in the soul.",
-      "There is gladness in my soul today, And hope and praise and love, For blessings which he gives me now, For joys “laid up” above.",
+      "There is gladness in my soul today, And hope and praise and love, For blessings which he gives me now, For joys &ldquo;laid up&rdquo; above.",
       "Oh, there's sunshine, blessed sunshine When the peaceful happy moments roll. When Jesus shows his smiling face, There is sunshine in the soul."
     ],
     "name": "There Is Sunshine in My Soul Today",
@@ -2322,7 +2323,7 @@ const hymns = [
   {
     "lines": [
       "Lord, accept into thy kingdom Each repentant, humbled one, Born of water and the Spirit In thy name, Beloved Son. Let the Holy Ghost, descending, Comfort, guide the path of youth, Channel of all light and glory, Key to vision, knowledge, truth.",
-      "Know ye not that he was holy? Yet he witnessed unto men That the way is straight and narrow Leading unto God again. Hark, glad tidings of salvation. Hear his word, “Come, follow me Unto glory in my kingdom, Unto life eternally.”",
+      "Know ye not that he was holy? Yet he witnessed unto men That the way is straight and narrow Leading unto God again. Hark, glad tidings of salvation. Hear his word, &ldquo;Come, follow me Unto glory in my kingdom, Unto life eternally.&rdquo;",
       "Like the sound of rushing waters In this day his word is said: Holy ordinance of mercy For the living and the dead! Let your hearts rejoice in gladness! Let the earth break forth and sing! Let the dead speak praising anthems To our God, eternal King!"
     ],
     "name": "Lord, Accept into Thy Kingdom",
@@ -2403,12 +2404,12 @@ const hymns = [
   },
   {
     "lines": [
-      "“Come along, come along” is the call that will win, To lead us to virtue and keep us from sin; Most men can be led, but few can be driv'n In shunning perdition and striving for heav'n.",
-      "“Come along, come along” is the call that will win In leading to virtue and keeping from sin; “Come along, come along” is the call that will win In leading to virtue and keeping from sin.",
-      "“Come to me, come to me” sweetly falls on the ear, The word of the Lord full of comfort and cheer, To bind up the broken, the captive set free, In the good time that's coming, we hope soon to see.",
-      "“Come along, come along” is the call that will win In leading to virtue and keeping from sin; “Come along, come along” is the call that will win In leading to virtue and keeping from sin.",
+      "“Come along, come along&rdquo; is the call that will win, To lead us to virtue and keep us from sin; Most men can be led, but few can be driv'n In shunning perdition and striving for heav'n.",
+      "“Come along, come along&rdquo; is the call that will win In leading to virtue and keeping from sin; &ldquo;Come along, come along&rdquo; is the call that will win In leading to virtue and keeping from sin.",
+      "“Come to me, come to me&rdquo; sweetly falls on the ear, The word of the Lord full of comfort and cheer, To bind up the broken, the captive set free, In the good time that's coming, we hope soon to see.",
+      "“Come along, come along&rdquo; is the call that will win In leading to virtue and keeping from sin; &ldquo;Come along, come along&rdquo; is the call that will win In leading to virtue and keeping from sin.",
       "Let us govern by kindness and never by force, All cheering and bright, like the sun in its course; Obedience will spring from each heart with a bound, And brotherhood flourish the wide world around.",
-      "“Come along, come along” is the call that will win In leading to virtue and keeping from sin; “Come along, come along” is the call that will win In leading to virtue and keeping from sin."
+      "“Come along, come along&rdquo; is the call that will win In leading to virtue and keeping from sin; &ldquo;Come along, come along&rdquo; is the call that will win In leading to virtue and keeping from sin."
     ],
     "name": "Come Along, Come Along",
     "number": 244
@@ -2731,9 +2732,9 @@ const hymns = [
   },
   {
     "lines": [
-      "A voice hath spoken from the dust, Its message pure, without alloy, Of treasured hope and sacred trust: Oh, “men are that they might have joy.”",
+      "A voice hath spoken from the dust, Its message pure, without alloy, Of treasured hope and sacred trust: Oh, &ldquo;men are that they might have joy.&rdquo;",
       "Should sorrow come, we'll not despair, For He would not that men should pine. The grief that comes we'll learn to bear Until again the sun doth shine.",
-      "Before the Lord, then, humbly go. His message will our spirits buoy. On us his blessings he'll bestow, For “men are that they might have joy.”"
+      "Before the Lord, then, humbly go. His message will our spirits buoy. On us his blessings he'll bestow, For &ldquo;men are that they might have joy.&rdquo;"
     ],
     "name": "Men Are That They Might Have Joy",
     "number": 275
@@ -2823,7 +2824,7 @@ const hymns = [
   {
     "lines": [
       "If you could hie to Kolob In the twinkling of an eye, And then continue onward With that same speed to fly, Do you think that you could ever, Through all eternity, Find out the generation Where Gods began to be?",
-      "Or see the grand beginning, Where space did not extend? Or view the last creation, Where Gods and matter end? Methinks the Spirit whispers, “No man has found ‘pure space,' Nor seen the outside curtains, Where nothing has a place.”",
+      "Or see the grand beginning, Where space did not extend? Or view the last creation, Where Gods and matter end? Methinks the Spirit whispers, &ldquo;No man has found ‘pure space,' Nor seen the outside curtains, Where nothing has a place.&rdquo;",
       "The works of God continue, And worlds and lives abound; Improvement and progression Have one eternal round. There is no end to matter; There is no end to space; There is no end to spirit; There is no end to race.",
       "There is no end to virtue; There is no end to might; There is no end to wisdom; There is no end to light. There is no end to union; There is no end to youth; There is no end to priesthood; There is no end to truth.",
       "There is no end to glory; There is no end to love; There is no end to being; There is no death above. There is no end to glory; There is no end to love; There is no end to being; There is no death above."
@@ -2929,11 +2930,14 @@ const hymns = [
   },
   {
     "lines": [
-      "O love that glorifies the Son, O love that says, \"Thy will be done!\"  Pure love whose spirit makes us one—",
+      "O love that glorifies the Son, O love that says, \"Thy will be done!\"  Pure love whose spirit makes us one, ",
       "[Chorus]  Come, fill my soul today;  Come, fill my soul today.",
-      "O love that binds our family, O love that brings my heart to thee, Pure love that lasts eternally—",
-      "O love that overcomes defeat, O love that turns the bitter sweet, Pure love that makes our lives complete—",
-      "O Lord, give me the will to mend;  O Lord, change me from foe to friend;  Dear Lord, sustain me to the end—"
+      "O love that binds our family, O love that brings my heart to thee, Pure love that lasts eternally,",
+      "[Chorus]  Come, fill my soul today;  Come, fill my soul today.",
+      "O love that overcomes defeat, O love that turns the bitter sweet, Pure love that makes our lives complete,",
+      "[Chorus]  Come, fill my soul today;  Come, fill my soul today.",
+      "O Lord, give me the will to mend;  O Lord, change me from foe to friend;  Dear Lord, sustain me to the end,",
+      "[Chorus]  Come, fill my soul today;  Come, fill my soul today.",
     ],
     "name": "O Love That Glorifies the Son",
     "number": 295
@@ -2964,6 +2968,15 @@ const hymns = [
     "name": "Home Can Be a Heaven on Earth",
     "number": 298
   },
+	{
+		"lines": [
+			"Children of our Heav'nly Father, Safely in his bosom gather; Nestling bird nor star in heaven, Such a refuge e'er was given.",
+			"Neither life nor death shall ever, From the Lord his children sever; Unto them his grace he showeth, And their sorrows all he knoweth.",
+			"Though he giveth or he taketh, God his children ne'er forsaketh; His the loving purpose solely, To preserve them pure and holy."
+		],
+		"name": "Children of our Heavenly Father",
+		"number": 299
+	},
   {
     "lines": [
       "I have a fam'ly here on earth. They are so good to me. I want to share my life with them through all eternity.",
@@ -3330,7 +3343,7 @@ const hymns = [
     "lines": [
       "O home belov'd, where'er I wander, On foreign land or distant sea, As time rolls by, my heart grows fonder And yearns more lovingly for thee! Tho fair be nature's scenes around me, And friends are ever kind and true, Tho joyous mirth and song surround me, My heart, my soul still yearn for you.",
       "The flow'rs around me may be fairer Than those that bloom upon thy hills; The streams, great, mighty treasure bearers, More noted may be than thy rills. No world renown my humble village Like these great towns may proudly claim; Yet my fond heart doth thrill with rapture Whene'er I hear thy humble name.",
-      "Ye valleys fair and snowcapped mountains, Ye peaceful hamlets 'mid the trees, Ye murm'ring streams and crystal fountains, Kissed by the cool, soft, balmy breeze, Words cannot tell how well I love thee Nor speak my longing when I roam. My heart alone can cry to heaven, “God bless my own dear mountain home.”"
+      "Ye valleys fair and snowcapped mountains, Ye peaceful hamlets 'mid the trees, Ye murm'ring streams and crystal fountains, Kissed by the cool, soft, balmy breeze, Words cannot tell how well I love thee Nor speak my longing when I roam. My heart alone can cry to heaven, &ldquo;God bless my own dear mountain home.&rdquo;"
     ],
     "name": "O Home Beloved",
     "number": 337
