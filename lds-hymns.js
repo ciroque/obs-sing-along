@@ -1715,7 +1715,7 @@ const hymns = [
   },
   {
     "lines": [
-      "O God, th'Eternal Father, Who dwells amid the sky, In Jesus' name we ask thee  To bless and sanctify, If we are pure before thee, This bread and cup of wine, That we may all remember  That offering divine?",
+      "O God, th'Eternal Father, Who dwells amid the sky, In Jesus' name we ask thee  To bless and sanctify, If we are pure before thee, This bread and cup of wine, That we may all remember  That offering divine",
       "That sacred, holy off'ring, By man least understood, To have our sins remitted  And take his flesh and blood, That we may ever witness  The suff'ring of thy Son, And always have his Spirit  To make our hearts as one.",
       "When Jesus, the Anointed, Descended from above  And gave himself a ransom  To win our souls with love?  With no apparent beauty, That man should him desire?  He was the promised Savior, To purify with fire.",
       "How infinite that wisdom, The plan of holiness, That made salvation perfect  And veiled the Lord in flesh, To walk upon his footstool  And be like man, almost, In his exalted station, And die, or all was lost."
@@ -2160,11 +2160,11 @@ const hymns = [
   },
   {
     "lines": [
-      "Savior, may I learn to love thee, Walk the path that thou hast shown, Pause to help and lift another, Finding strength beyond my own. Savior, may I learn to love thee—",
+      "Savior, may I learn to love thee, Walk the path that thou hast shown, Pause to help and lift another, Finding strength beyond my own. Savior, may I learn to love thee",
       "[Chorus]  Lord, I would follow thee.",
       "Who am I to judge another  When I walk imperfectly?  In the quiet heart is hidden  Sorrow that the eye can't see. Who am I to judge another?",
-      "I would be my brother's keeper;  I would learn the healer's art. To the wounded and the weary  I would show a gentle heart. I would be my brother's keeper—",
-      "Savior, may I love my brother  As I know thou lovest me, Find in thee my strength, my beacon, For thy servant I would be. Savior, may I love my brother—"
+      "I would be my brother's keeper;  I would learn the healer's art. To the wounded and the weary  I would show a gentle heart. I would be my brother's keeper",
+      "Savior, may I love my brother  As I know thou lovest me, Find in thee my strength, my beacon, For thy servant I would be. Savior, may I love my brother"
     ],
     "name": "Lord, I Would Follow Thee",
     "number": 220
