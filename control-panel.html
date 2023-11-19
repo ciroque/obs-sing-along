@@ -1,144 +1,183 @@
 <!DOCTYPE html>
 <html lang="us-en">
-<head>
-  <script src="./lds-hymns.js"></script>
-	<script>
-	const sourceChannel = new BroadcastChannel('obs-sing-along-source-channel');
-	const panelChannel = new BroadcastChannel('obs-sing-along-panel-channel');
+	<head>
+		<script src="./lds-hymns.js"></script>
+		<script>
+			const sourceChannel = new BroadcastChannel('obs-sing-along-source-channel');
+			const panelChannel = new BroadcastChannel('obs-sing-along-panel-channel');
 
-	sourceChannel.onmessage = (ev) => singAlongControl.handleSourceEvent(ev);
+			sourceChannel.onmessage = (ev) => singAlongControl.handleSourceEvent(ev);
 
-	class SingAlongControl {
-    songList = document.getElementById("songs");
-    
-    loadSong() {
-      const song = hymns[this.songList.selectedIndex];
-      panelChannel.postMessage({name: "LOAD-SONG", song: song})
-    };
-    
-    loadSongs() {
-      const appendOption = ({number, name}, index) => {
-        var option = document.createElement("option");
-        option.text = `#${number}: ${name}`;
-        option.value = index;
-        this.songList.appendChild(option);
-      };
-      
-      
-      hymns.forEach(appendOption);
-    };
-  
-		handleSourceEvent(ev) {
-			
-			const {name, verseCount, selectedVerse} = ev.data;
-			
-			switch(name) {
-				case "SONG-LOADED": {
-					console.log(`Song loaded, verse count: ${verseCount}`);
-					this.showVerseNumbers(verseCount);
-					break;
+			class SingAlongControl {
+				songList = document.getElementById("songs");
+				songQueue = document.getElementById("song-queue");
+
+				createOption({number, name}, index) {
+					const option = document.createElement("option");
+					option.text = `#${number}: ${name}`;
+					option.value = index;
+					return option;
 				}
-			
-				case "VERSE-SELECTED": {
-					console.log(`Verse selected: ${selectedVerse}`);
-					//alert(`Verse selected: ${selectedVerse}`);
-          this.hilightVerse(selectedVerse);
-					break;
+
+				dequeueSong() {
+					const index = this.songQueue.selectedIndex;
+					this.songQueue.remove(index);
 				}
-				
-				default: {
-					console.log(`Sing Along control received a message: ${JSON.stringify(ev.data, null, 3)}`);
-					break;
+
+				loadSong() {
+					const songIndex = this.songQueue.options[this.songQueue.selectedIndex].value;
+					const song = hymns[songIndex];
+					panelChannel.postMessage({name: "LOAD-SONG", song: song})
+				};
+
+				loadSongs() {
+					const appendOption = (song, index) => {
+						const option = this.createOption(song, index);
+						this.songList.appendChild(option);
+					};
+
+					// This value is set in lds-hymns.js, included above.
+					hymns.forEach(appendOption);
+				};
+
+				handleSourceEvent(ev) {
+
+					const {name, verseCount, selectedVerse} = ev.data;
+
+					switch (name) {
+						case "SONG-LOADED": {
+							console.log(`Song loaded, verse count: ${verseCount}`);
+							this.showVerseNumbers(verseCount);
+							break;
+						}
+
+						case "VERSE-SELECTED": {
+							console.log(`Verse selected: ${selectedVerse}`);
+							//alert(`Verse selected: ${selectedVerse}`);
+							this.highlightVerse(selectedVerse);
+							break;
+						}
+
+						default: {
+							console.log(`Sing Along control received a message: ${JSON.stringify(ev.data, null, 3)}`);
+							break;
+						}
+					}
+				};
+
+				highlightVerse(index) {
+					const ele = document.getElementById("verses");
+					const verseEles = ele.getElementsByTagName("span");
+					for (var i = 0; i < verseEles.length; i++) {
+						verseEles[i].className = "verse-num";
+					}
+					verseEles[index].className = "verse-num-a";
 				}
+
+				queueSong() {
+					const index = this.songList.selectedIndex;
+					const song = hymns[index];
+					const option = this.createOption(song, index);
+					this.songQueue.appendChild(option);
+				}
+
+				selectVerse(index) {
+					panelChannel.postMessage({name: "SELECT-VERSE", index: index});
+				};
+
+				showVerseNumbers(count) {
+					var innerHtml = "<div class=\"verse-lbl\">Verses:</div>";
+					for (var i = 0; i < count; i++) {
+						innerHtml += `<span class="verse-num" onclick="singAlongControl.selectVerse(${i})">${i + 1}</span>`
+					}
+					;
+					document.getElementById("verses").innerHTML = innerHtml;
+				};
 			}
-		};
-		
-    hilightVerse(index) {
-      const ele = document.getElementById("verses");
-      const verseEles = ele.getElementsByTagName("span");
-      for(var i = 0; i < verseEles.length; i++) { verseEles[i].className = "verse-num"; }
-      verseEles[index].className = "verse-num-a";
-    }
-    
-		selectVerse(index) {
-			panelChannel.postMessage({name: "SELECT-VERSE", index: index});
-		};
-		
-		showVerseNumbers(count) {
-			var innerHtml = "<div class=\"verse-lbl\">Verses:</div>";
-			for(var i = 0; i < count; i++) { 
-        innerHtml += `<span class="verse-num" onclick="singAlongControl.selectVerse(${i})">${i + 1}</span>` 
-      };		
-      document.getElementById("verses").innerHTML = innerHtml;
-		};
-	}
-	</script>
-	<style>
-    :root {
-      --interface-size: 1;
-      --obs-background: #3a393a;
-    }
- 
-    body {
-      background: var(--obs-background);
-      color: var(--main-color);
-    }
-    
-    .btn-bar {
-      margin-top: 0.5em;
-    }
-    
-    .verse-lbl {
-      color: white;
-      font-weight: bold;
-      padding: 0.5em 0.5em 0.5em 0em;
-      margin-bottom: 0.25em;
-    }
-    
-		.verse-num {
-      background-color: #6F6F6F;
-			border: outset 1px #F3F3F3;
-      color: white;
-      cursor: pointer;
-			margin: 0.25em;
-			padding: 0.5em;
-		}
-    
-		.verse-num-a {
-      background-color: #0F0F0F;
-			border: inset 1px #F3F3F3;
-      color: yellow;
-      cursor: pointer;
-			margin: 0.25em;
-			padding: 0.5em;
-		}
-    
-    #songs {
-      margin-top: 0.5em;
-    }
-    
-    #verses {
-      padding: 0.5em 0.5em 0.5em 0em;
-    }
-	</style>
-</head>
-<body>
-  
-  <select id="songs"></select>
+		</script>
+		<style>
+			:root {
+				--interface-size: 1;
+				--obs-background: #3a393a;
+			}
 
-	<div class="btn-bar">
-		<button onclick="singAlongControl.loadSong()">Load Song</button>
-		<button onclick="panelChannel.postMessage({name: 'PREV-VERSE'})">Previous Verse</button>
-		<button onclick="panelChannel.postMessage({name: 'NEXT-VERSE'})">Next Verse</button>
-	</div>
+			body {
+				background: var(--obs-background);
+				color: var(--main-color);
+			}
 
-	<div id="verses">
-  </div>
-	
-	<script>
-	const singAlongControl = new SingAlongControl();
-	document.singAlongControl = singAlongControl;
-  singAlongControl.loadSongs();
-	</script>
-</body>
+			.btn-bar {
+				margin-top: 0.5em;
+			}
+
+			.verse-lbl {
+				color: white;
+				font-weight: bold;
+				padding: 0.5em 0.5em 0.5em 0em;
+				margin-bottom: 0.25em;
+			}
+
+			.verse-num {
+				background-color: #6F6F6F;
+				border: outset 1px #F3F3F3;
+				color: white;
+				cursor: pointer;
+				margin: 0.25em;
+				padding: 0.5em;
+			}
+
+			.verse-num-a {
+				background-color: #0F0F0F;
+				border: inset 1px #F3F3F3;
+				color: yellow;
+				cursor: pointer;
+				margin: 0.25em;
+				padding: 0.5em;
+			}
+
+			#songs {
+				margin-top: 0.5em;
+				width: 100%;
+			}
+
+			#song-queue {
+				margin-top: 0.5em;
+				width: 100%;
+			}
+
+			#verses {
+				padding: 0.5em 0.5em 0.5em 0em;
+			}
+		</style>
+	</head>
+	<body>
+		<select id="songs"></select>
+
+		<div class="btn-bar">
+			<button onclick="singAlongControl.queueSong()">queue</button>
+			<button onclick="singAlongControl.dequeueSong()">dequeue</button>
+
+		</div>
+
+		<select
+			id="song-queue"
+			ondblclick="singAlongControl.loadSong()"
+			size="4">
+		</select>
+
+		<div class="btn-bar">
+			<button onclick="singAlongControl.loadSong()">Load Song</button>
+			<button onclick="panelChannel.postMessage({name: 'PREV-VERSE'})">Previous Verse</button>
+			<button onclick="panelChannel.postMessage({name: 'NEXT-VERSE'})">Next Verse</button>
+		</div>
+
+		<div id="verses">
+		</div>
+
+		<script>
+			const singAlongControl = new SingAlongControl();
+			document.singAlongControl = singAlongControl;
+			singAlongControl.loadSongs();
+		</script>
+	</body>
 </html>
